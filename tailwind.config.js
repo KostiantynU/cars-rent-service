@@ -1,0 +1,45 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ['./src/**/*.{js,jsx}'],
+  theme: {
+    colors: {
+      'label-color': '#8A8A89',
+      'main-text': '#121417',
+      'details-text': '#121417', // opacity 50% for text,
+      'rental-conditions': '#363535',
+      'button-text': '#FFFFFF',
+      'button-main': '#3470FF',
+      'button-hover': '#0B44CD',
+    },
+    fontFamily: {
+      sans: [
+        'Manrope',
+        '-apple-system',
+        'BlinkMacSystemFont',
+        'Segoe UI',
+        'Roboto',
+        'Oxygen',
+        'Ubuntu',
+        'Cantarell',
+        'Fira Sans',
+        'Droid Sans',
+        'Helvetica Neue',
+      ],
+      serif: [
+        'Manrope',
+        '-apple-system',
+        'BlinkMacSystemFont',
+        'Segoe UI',
+        'Roboto',
+        'Oxygen',
+        'Ubuntu',
+        'Cantarell',
+        'Fira Sans',
+        'Droid Sans',
+        'Helvetica Neue',
+      ],
+    },
+    extend: {},
+  },
+  plugins: [],
+};

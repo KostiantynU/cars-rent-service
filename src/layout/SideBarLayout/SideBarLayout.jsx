@@ -19,7 +19,7 @@ const SideBarLayout = () => {
             </label>
             <InputList
               classInp={
-                'appearance-none w-56 px-[18px] py-3.5 relative rounded-[14px] bg-[#F7F7FB] focus:outline-none [&::-webkit-calendar-picker-indicator]:invisible'
+                'appearance-none w-56 px-[18px] py-3.5 relative rounded-[14px] bg-[#F7F7FB] focus:outline-none  [&::-webkit-calendar-picker-indicator]:border-t-0 [&::-webkit-calendar-picker-indicator]:border-l-0 [&::-webkit-calendar-picker-indicator]:border-r-[1px] [&::-webkit-calendar-picker-indicator]:border-b-[1px] [&::-webkit-calendar-picker-indicator]:border-solid [&::-webkit-calendar-picker-indicator]:rotate-45 [&::-webkit-calendar-picker-indicator]:opacity-[1] [&::-webkit-calendar-picker-indicator]:invisible [&::-webkit-calendar-picker-indicator]:h-[4px] [&::-webkit-calendar-picker-indicator]:p-[3px] [&::-webkit-calendar-picker-indicator:focus]:rotate-45' //[&::-webkit-calendar-picker-indicator]:invisible [&::-webkit-calendar-picker-indicator:focus]:opacity-[0]
               }
               listInp={'carBrands'}
               typeInp={'text'}

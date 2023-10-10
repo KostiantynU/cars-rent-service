@@ -3,13 +3,14 @@ module.exports = {
   content: ['./src/**/*.{js,jsx}'],
   theme: {
     colors: {
-      'label-color': '#8A8A89',
-      'main-text': '#121417',
-      'details-text': '#121417', // opacity 50% for text,
-      'rental-conditions': '#363535',
-      'button-text': '#FFFFFF',
-      'button-main': '#3470FF',
-      'button-hover': '#0B44CD',
+      labelColor: '#8A8A89',
+      mainText: '#121417',
+      detailsTextFiftyOpacity: '#121417', // opacity 50% for text,
+      rentalConditions: '#363535',
+      inputColor: '#F7F7FB',
+      buttonText: '#FFFFFF',
+      buttonMain: '#3470FF',
+      buttonHover: '#0B44CD',
     },
     fontFamily: {
       sans: [

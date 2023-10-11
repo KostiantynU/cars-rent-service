@@ -1,12 +1,13 @@
 import { Routes, Route } from 'react-router-dom';
 import SideBarLayout from './layout/SideBarLayout/SideBarLayout';
+
 // import logo from './logo.svg';
 // import './App.css';
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<SideBarLayout />} />
+      <Route path="/" element={<SideBarLayout />}></Route>
     </Routes>
 
     /* <header className="App-header">

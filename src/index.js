@@ -7,8 +7,7 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  // <BrowserRouter basename="cars-rent-service">
-  <BrowserRouter>
+  <BrowserRouter basename="cars-rent-service">
     <React.StrictMode>
       <App />
     </React.StrictMode>

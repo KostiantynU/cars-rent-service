@@ -4,13 +4,13 @@ module.exports = {
   theme: {
     colors: {
       labelColor: '#8A8A89',
-      mainText: '#121417',
-      detailsTextFiftyOpacity: '#121417', // opacity 50% for text,
-      rentalConditions: '#363535',
+      mainTextColor: '#121417',
+      detailsTextFiftyOpacityColor: '#121417', // opacity 50% for text,
+      rentalConditionsColor: '#363535',
       inputColor: '#F7F7FB',
-      buttonText: '#FFFFFF',
-      buttonMain: '#3470FF',
-      buttonHover: '#0B44CD',
+      buttonTextColor: '#FFFFFF',
+      buttonMainColor: '#3470FF',
+      buttonHoverColor: '#0B44CD',
     },
     fontFamily: {
       sans: [
@@ -42,5 +42,5 @@ module.exports = {
     },
     extend: {},
   },
-  plugins: [],
+  plugins: [require('@headlessui/tailwindcss')({ prefix: 'ui' })],
 };

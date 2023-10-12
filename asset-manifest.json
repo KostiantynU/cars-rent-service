@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/cars-rent-service/static/css/main.d369e0ac.css",
+    "main.js": "/cars-rent-service/static/js/main.7edc9abb.js",
+    "static/js/787.895941a2.chunk.js": "/cars-rent-service/static/js/787.895941a2.chunk.js",
+    "index.html": "/cars-rent-service/index.html",
+    "main.d369e0ac.css.map": "/cars-rent-service/static/css/main.d369e0ac.css.map",
+    "main.7edc9abb.js.map": "/cars-rent-service/static/js/main.7edc9abb.js.map",
+    "787.895941a2.chunk.js.map": "/cars-rent-service/static/js/787.895941a2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d369e0ac.css",
+    "static/js/main.7edc9abb.js"
+  ]
+}

@@ -10,6 +10,8 @@ const BrandsComboBox = ({ brandsArray }) => {
       ? brandsArray
       : brandsArray.filter(el => el.toLowerCase().includes(query.toLowerCase()));
 
+  const clearValue = () => setQuery('');
+
   return (
     <Combobox value={selectedCar} onChange={setSelectedCar} nullable>
       <Combobox.Label className="text-labelColor font-medium text-sm leading-[1.29] mb-2">
@@ -19,8 +21,9 @@ const BrandsComboBox = ({ brandsArray }) => {
         <Combobox.Input
           className="w-56 px-[18px] py-3.5 relative outline-none rounded-[14px] bg-inputColor text-lg text-mainTextColor font-medium leading-[1.11] placeholder:text-mainTextColor placeholder:leading-[1.11]"
           onChange={evt => setQuery(evt.target.value)}
+          onBlur={() => clearValue('')}
           placeholder="Enter the text"
-          value={query === '' ? selectedCar.model : query}
+          value={query === '' ? selectedCar : query}
         />
         <Combobox.Options className="absolute top-[100%] left-0 w-[100%] h-[272px] overflow-y-scroll scroll-smooth border-[1px] border-mainTextColor/5 rounded-[14px] bg-buttonText">
           {filteredBrandsArray.map(el => (

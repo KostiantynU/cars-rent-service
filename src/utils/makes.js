@@ -1,4 +1,5 @@
 const brandsArray = [
+  '',
   'Buick',
   'Volvo',
   'HUMMER',

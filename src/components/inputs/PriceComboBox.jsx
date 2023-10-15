@@ -6,20 +6,24 @@ const PriceComboBox = () => {
   const [query, setQuery] = useState('');
 
   const priceArray = [];
-  for (let i = 10; i <= 200; i += 10) {
+  for (let i = 0; i <= 200; i += 10) {
+    if (i === 0) {
+      priceArray.push('');
+      continue;
+    }
     priceArray.push(i);
   }
-  const filteredPriceArray =
-    query === ''
-      ? priceArray
-      : priceArray.filter(
-          //   el => el === Number(query)
-          el => String(el).includes(query.toLowerCase())
-          //   return el.toLowerCase().includes(query).toLowerCase();
-        );
+  // const filteredPriceArray =
+  //   query === ''
+  //     ? priceArray
+  //     : priceArray.filter(
+  //         //   el => el === Number(query)
+  //         el => String(el).includes(query.toLowerCase())
+  //         //   return el.toLowerCase().includes(query).toLowerCase();
+  //       );
 
   return (
-    <Combobox onChange={setPricePerHour} nullable>
+    <Combobox value={pricePerHour} onChange={setPricePerHour} nullable>
       <Combobox.Label className="text-labelColor font-medium text-sm leading-[1.29] mb-2">
         Price/ 1 hour
       </Combobox.Label>

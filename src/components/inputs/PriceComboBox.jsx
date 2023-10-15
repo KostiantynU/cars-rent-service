@@ -27,11 +27,12 @@ const PriceComboBox = () => {
         <Combobox.Input
           className="w-[125px] px-[18px] py-3.5 outline-none rounded-[14px] bg-inputColor text-lg text-mainTextColor font-medium leading-[1.11] placeholder:text-mainTextColor placeholder:leading-[1.11] [&::-webkit-inner-spin-button]:invisible"
           onChange={evt => setQuery(evt.target.value)}
+          onBlur={() => setQuery('')}
           placeholder="To $"
-          value={pricePerHour}
+          value={query === '' ? pricePerHour : query}
         />
-        <Combobox.Options className="absolute top-[100%] left-0 w-[100%] h-[188px] overflow-y-scroll scroll-smooth border-[1px] border-mainTextColor/5 rounded-[14px] bg-buttonText">
-          {filteredPriceArray.map(el => (
+        <Combobox.Options className="absolute top-[100%] left-0 w-[100%] h-[188px] bg-buttonTextColor overflow-y-scroll scroll-smooth border-[1px] border-mainTextColor/5 rounded-[14px] bg-buttonText">
+          {priceArray.map(el => (
             <Combobox.Option
               key={el}
               value={el}

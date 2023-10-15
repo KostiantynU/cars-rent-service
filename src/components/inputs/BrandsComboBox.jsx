@@ -1,4 +1,4 @@
-import { Combobox } from '@headlessui/react';
+import { Combobox, Transition } from '@headlessui/react';
 import { useState } from 'react';
 
 const BrandsComboBox = ({ brandsArray }) => {
@@ -25,12 +25,27 @@ const BrandsComboBox = ({ brandsArray }) => {
           placeholder="Enter the text"
           value={query === '' ? selectedCar : query}
         />
-        <Combobox.Options className="absolute top-[100%] left-0 w-[100%] h-[272px] overflow-y-scroll scroll-smooth border-[1px] border-mainTextColor/5 rounded-[14px] bg-buttonText">
-          {filteredBrandsArray.map(el => (
+        <Transition
+          enter="transition duration-100 ease-out"
+          enterFrom="transform scale-95 opacity-0"
+          enterTo="transform scale-100 opacity-100"
+          leave="transition duration-75 ease-out"
+          leaveFrom="transform scale-100 opacity-100"
+          leaveTo="transform scale-95 opacity-0"
+        ></Transition>
+        <Combobox.Options className="absolute top-[100%] left-0 w-[100%] h-[272px] overflow-y-scroll scroll-smooth border-[1px] border-mainTextColor/5 rounded-[14px] bg-buttonTextColor ">
+          {brandsArray.map(el => (
             <Combobox.Option
               key={el}
               value={el}
               className="ui-active:text-mainTextColor ui-not-active:text-mainTextColor/20"
+              // className={`${
+              //   query === ''
+              //     ? 'text-mainTextColor/20'
+              //     : el.toLowerCase().includes(query.toLowerCase())
+              //     ? 'text-mainTextColor'
+              //     : 'text-mainTextColor/20'
+              // }`}
             >
               {el}
             </Combobox.Option>

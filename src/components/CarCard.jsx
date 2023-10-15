@@ -10,7 +10,6 @@ const CarCard = ({ el }) => {
   const editedCity = city.slice(0, comaIndex);
 
   const newArray = [
-    el.id,
     editedCity,
     country,
     el.rentalCompany,

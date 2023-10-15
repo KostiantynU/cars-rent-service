@@ -1,5 +1,6 @@
 import MyButton from './Button';
 import CardDescription from './CardDescription';
+import { nanoid } from 'nanoid';
 
 const CarCard = ({ el }) => {
   const addressArray = el.address.split(' ');
@@ -9,6 +10,7 @@ const CarCard = ({ el }) => {
   const editedCity = city.slice(0, comaIndex);
 
   const newArray = [
+    el.id,
     editedCity,
     country,
     el.rentalCompany,
@@ -34,9 +36,11 @@ const CarCard = ({ el }) => {
       </div>
 
       <ul className="flex flex-wrap mb-7">
-        {newArray.map(el => (
-          <CardDescription key={el.id} el={el}></CardDescription>
-        ))}
+        {newArray.map(fieldDescription => {
+          return (
+            <CardDescription key={nanoid()} fieldDescription={fieldDescription}></CardDescription>
+          );
+        })}
       </ul>
       <MyButton typeBtn={'button'} textBtn={'Learn more'} widthBtn={'274px'} />
     </li>

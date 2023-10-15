@@ -5,7 +5,7 @@ import getData from '../../services/fetchAPI';
 const Catalog = () => {
   const [carsArray, setcarsArray] = useState([]);
   useEffect(() => {
-    getData.getCarsArray().then(result => {
+    getData.getCarsArray({ page: 1, limit: 24 }).then(result => {
       setcarsArray([...result]);
     });
   }, []);

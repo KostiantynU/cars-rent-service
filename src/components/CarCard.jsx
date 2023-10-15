@@ -15,10 +15,10 @@ const CarCard = ({ el }) => {
     el.type,
     el.model,
     el.mileage,
-    el.functionalities[Math.ceil(Math.random())].slice(0, 20),
+    // el.functionalities[Math.ceil(Math.random())].slice(0, 20),
   ];
   return (
-    <div className="w-[274px] mb-[50px]">
+    <li className="w-[274px] mb-[50px]">
       <div className="overflow-hidden rounded-[14px]  mb-[14px] w-[274px] h-[268px]">
         <img
           src={el.img}
@@ -39,7 +39,7 @@ const CarCard = ({ el }) => {
         ))}
       </ul>
       <MyButton typeBtn={'button'} textBtn={'Learn more'} widthBtn={'274px'} />
-    </div>
+    </li>
   );
 };
 

@@ -3,19 +3,19 @@ import CarCard from '../../components/CarCard';
 import getData from '../../services/fetchAPI';
 
 const Catalog = () => {
-  const [info, setInfo] = useState([]);
+  const [carsArray, setcarsArray] = useState([]);
   useEffect(() => {
-    getData.getInfo().then(result => {
-      setInfo([...result]);
+    getData.getCarsArray().then(result => {
+      setcarsArray([...result]);
     });
   }, []);
 
   return (
-    <div className="grid grid-cols-4">
-      {info.map(el => (
+    <ul className="grid grid-cols-4">
+      {carsArray.map(el => (
         <CarCard key={el.id} el={el} />
       ))}
-    </div>
+    </ul>
   );
 };
 
